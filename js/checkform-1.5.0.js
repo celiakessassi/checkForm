@@ -1,14 +1,10 @@
 /*!
- * chceckFrom, Adam Miko
- * version: 2.5 (28.08.2013)
+ * chceckFrom, Adam Mikó
+ * version: 1.5.0 (28.08.2013)
  * @requires jQuery v1.9+
  *
  * http://opensource.org/licenses/MIT
- *
- * 2.5 CHANGELOG
- * Moznost pridavat si vlastne error halsky do inputov
  */
-
 ;(function ( $, window, document, undefined ) {
 
 	// Meno pluginu
@@ -148,7 +144,7 @@
 
 		// false alebo true
 		return returnBool;
-	}
+	};
 
 	/**
 	 *	TELO PLUGINU
