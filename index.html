@@ -1,1 +1,75 @@
-a
+<!DOCTYPE html>
+<html lang="en">
+		<meta charset="utf-8">
+		
+		<title>Checkform - easy check form</title>
+	</head>
+	<body>
+		
+		<div id="site">
+
+			<form action="" id="kontroluj">
+				<table>
+					<tr>
+						<td style="width: 100px;">Meno</td>
+						<td><input id="meno-id" type="text" data-check="true" data-msg="chyba meno" name="meno"></td>
+					</tr>
+					<tr>
+						<td style="width: 100px;">Priezvisko</td>
+						<td><input type="text" data-check="true" data-msg="chyba priezvysko" name="priezvisko"></td>
+					</tr>
+					<tr>
+						<td>Telefon</td>
+						<td><input name="telefon" data-check="^[0-9]+$" type="text"></td>
+					</tr>
+					<tr>
+						<td>E-mail</td>
+						<td><input name="email" data-check="email" data-msg="chyba mail" type="text"></td>
+					</tr>
+					<tr>
+						<td>Data group</td>
+						<td data-group='{ "min": "2", "check": "all" }'>
+							<input type="checkbox" name="chc1"> Checked 1 <br>
+							<input type="checkbox" name="chc2"> Checked 2 <br>
+							<input type="checkbox" data-check="true" name="chc3"> Checked 3 <br>
+							<input type="checkbox" data-check="true" name="chc4"> Checked 4 <br>
+						</td>
+					</tr>
+					<tr>
+						<td>Normal group</td>
+						<td>
+							<input id="chc5" type="checkbox" name="chc5" data-check="true"> <label for="chc5">Checked 5</label> <br>
+							<input id="chc6" type="checkbox" name="chc6"> <label for="chc6">Checked 6</label> <br>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>line break</td>
+					</tr>
+					<tr>
+						<td>Sprava</td>
+						<td><textarea name="sprava" data-check="true" cols="30" rows="10"></textarea></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><input type="submit"></td>
+					</tr>
+				</table>
+			</form>
+
+		</div>
+	
+
+		<!--[if lt IE 9]>
+			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<![endif]-->
+		<!--[if gte IE 9]><!-->
+			<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+			<script>window.jQuery || document.write('<script src="/js/jquery-2.0.3.min.js"><\/script>')</script>
+		<!--<![endif]-->
+
+		<script src="js/checkform-1.5.0.min.js"></script>
+		<script src="js/main.js"></script>
+		
+	</body>
+</html>
